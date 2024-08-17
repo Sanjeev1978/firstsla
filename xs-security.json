@@ -1,0 +1,27 @@
+{
+  "xsappname": "invaomanagecost",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application",
+  "scopes": [
+    {
+        "name": "$XSAPPNAME.Viewer",
+        "description": "Viewer"
+    }
+],
+"role-templates": [
+    {
+        "name": "Viewer",
+        "description": "Viewer",
+        "scope-references": [
+            "$XSAPPNAME.Viewer"
+        ]
+    }
+],
+
+  "oauth2-configuration": {
+    "token-validity": 9000,
+    "redirect-uris": [
+      "https://api.cf.us10-001.hana.ondemand.com/login/callback"
+    ]
+  }
+}
